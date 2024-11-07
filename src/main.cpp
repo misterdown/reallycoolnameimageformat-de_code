@@ -23,7 +23,7 @@ using std::cerr;
 using std::min;
 using std::max;
 using std::fstream;
-using std::ios_base;
+using std::ios;
 
 struct rgb_color {
     public:
@@ -350,7 +350,7 @@ int main(int argc, char** argv) {
             int x, y, c;
             string reallycoolnameimageformatData;
             {
-                fstream reallycoolnameimageformatFile(inputFile, ios_base::openmode::_S_in);
+                fstream reallycoolnameimageformatFile(inputFile, ios::in);
                 if (!reallycoolnameimageformatFile.is_open()) {
                     cerr << "Failed to open file named " << inputFile << " .";
                     exit(EXIT_FAILURE);
@@ -387,7 +387,7 @@ int main(int argc, char** argv) {
             
             fstream reallycoolnameimageformatFile(
                 get_file_extension(outputFile) == "reallycoolnameimageformat" ? outputFile.c_str() : (outputFile + ".reallycoolnameimageformat").c_str(),
-                ios_base::openmode::_S_out);
+                ios::out);
 
             stream_code_into_reallycoolnameimageformat(reallycoolnameimageformatFile, image, nameColorPairs);
             

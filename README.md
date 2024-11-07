@@ -10,4 +10,7 @@ But, if you want to:
 - Build with CMake:
   - ```cmake .```
   - ```cmake --build .```
-- Use as a default command-line app: ```reallycoolnameimageformat_de_code --help```, ```reallycoolnameimageformat_de_code -i myWeirdPng.png -o mySuperiorMhm -c``` (codes png into reallycoolnameimageformat)
+- Use as a default command-line app: 
+  - ```reallycoolnameimageformat_de_coder --help```,
+  - ```reallycoolnameimageformat_de_coder -i myWeirdPng.png -o mySuperiorMhm -c``` (converts `png` into `reallycoolnameimageformat`),
+  - ```reallycoolnameimageformat_de_coder -i mySuperiorMhm.reallycoolnameimageformat -o myWeirdJpg.jpg -d``` (converts `reallycoolnameimageformat` into `jpg`)
